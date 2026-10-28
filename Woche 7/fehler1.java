@@ -1,7 +1,7 @@
 public class Aufgabe1 {
     public static void main(String[] args) {
         int[] zahlen = {10, 20, 30, 40};
-        for (int i = 0; i <= zahlen.length; i++) {
+        for (int i = 0; i < zahlen.length; i++) {
             System.out.println(zahlen[i]);
         }
     }

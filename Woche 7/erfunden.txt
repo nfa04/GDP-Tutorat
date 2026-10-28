@@ -1,0 +1,9 @@
+fun transpose(in: arr(arr(int)) input, out: arr(arr(int))) {
+    arr(arr(int)) outmatrix = create(arr(arr(int, size(input)), size(input[1])))
+    for(y, 1, size(input)) {
+        for(x, 1, size(input[1])) {
+            outmatrix(x)(y) = input(y)(x)
+        }
+    }
+    out(outmatrix)
+}

@@ -2,9 +2,9 @@ import java.util.Arrays;
 
 public class Aufgabe4 {
     public static int[] verdoppeln(int[] zahlen) {
-        int[] ergebnis = zahlen;
+        int[] ergebnis = new int[zahlen.length];
         for (int i = 0; i < ergebnis.length; i++) {
-            ergebnis[i] = ergebnis[i] * 2;
+            ergebnis[i] = zahlen[i] * 2;
         }
         return ergebnis;
     }
