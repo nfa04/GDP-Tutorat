@@ -1,5 +1,13 @@
 package programmverstehen.p4;
 
+
+public class Main {
+    public static void main(String[] args) {
+        B b = new B();
+    }
+}
+
+
 class A {
     A() {
         System.out.println("A1");
@@ -19,11 +27,5 @@ class B extends A {
     B(int x) {
         super(x);
         System.out.println("B2");
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        B b = new B();
     }
 }

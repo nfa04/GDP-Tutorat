@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group = 'ch.unibas.dmi'
+version = '1.0-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.2'
+}
+
+test {
+    useJUnit()
+    dependsOn cleanTest
+    testLogging.events "passed", "skipped", "failed"
+    testLogging.exceptionFormat = 'short'
+}
